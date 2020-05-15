@@ -71,7 +71,7 @@ class StoryBrain {
     }
     List<int> endStories = [3, 4, 5];
     if (endStories.contains(_storyNumber)) {
-      // It's the end of the game
+      print('It is the end of the game');
       restart();
     }
   }
