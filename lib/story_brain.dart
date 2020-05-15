@@ -53,12 +53,12 @@ class StoryBrain {
 
   void nextStory({int choiceNumber}) {
     if (choiceNumber == 1) {
-      if (_storyNumber == 0) {
-        _storyNumber = 2;
-      } else if (_storyNumber == 1) {
+      if (_storyNumber == 0 || _storyNumber == 1) {
         _storyNumber = 2;
       } else if (_storyNumber == 2) {
         _storyNumber = 5;
+      } else if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
+        restart();
       }
     } else if (choiceNumber == 2) {
       if (_storyNumber == 0) {
@@ -68,11 +68,6 @@ class StoryBrain {
       } else if (_storyNumber == 2) {
         _storyNumber = 4;
       }
-    }
-    print('Current storyNumber: $_storyNumber');
-    if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
-      print('It is the end of the game - Restarting');
-      // restart();
     }
   }
 
