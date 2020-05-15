@@ -69,10 +69,18 @@ class StoryBrain {
         _storyNumber = 4;
       }
     }
-    List<int> endStories = [3, 4, 5];
-    if (endStories.contains(_storyNumber)) {
-      print('It is the end of the game');
-      restart();
+    print('Current storyNumber: $_storyNumber');
+    if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
+      print('It is the end of the game - Restarting');
+      // restart();
+    }
+  }
+
+  bool buttonShouldBeVisible() {
+    if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
