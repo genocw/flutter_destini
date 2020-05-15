@@ -49,7 +49,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 2,
                 child: FlatButton(
                   onPressed: () {
-                    //Choice 1 made by user.
+                    print('Choice 1 made by user.');
                     storyBrain.nextStory(choiceNumber: 1);
                   },
                   color: Colors.red,
@@ -70,7 +70,7 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: FlatButton(
                   onPressed: () {
-                    //Choice 2 made by user.
+                    print('Choice 2 made by user.');
                     storyBrain.nextStory(choiceNumber: 2);
                   },
                   color: Colors.blue,
